@@ -49,7 +49,7 @@ INSERT INTO tb_profile_role values(2, 4);
 INSERT INTO tb_profile_role values(2, 6);
 
 ----------------- DEFAULT INSERTS ------------------------------------
-INSERT INTO tb_user_admin(id_user_admin, id_profile, dt_create, ds_email, ds_password, nu_ddd_cel, nu_cel, nm_user, dt_last_login, ds_token, dt_expiry_token, is_email_verified)
+INSERT INTO tb_user_admin(id_user_admin, id_profile, dt_create, ds_email, ds_password, nu_cel, nm_user, dt_last_login, ds_token, dt_expiry_token, is_email_verified)
 	VALUES (
 	1,
 	1,
