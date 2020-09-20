@@ -15,11 +15,7 @@ public class UserRequest {
 	private String dsEmail;
 	
 	@NotBlank
-	@Size(max = 2, min = 2)
-	private String nuDdd;
-	
-	@NotBlank
-	@Size(max = 9, min = 9)
+	@Size(max = 20, min = 9)
 	private String nuCel;
 	
 	@NotBlank
@@ -34,13 +30,6 @@ public class UserRequest {
 		this.dsEmail = dsEmail;
 	}
 	
-	public String getNuDdd() {
-		return nuDdd;
-	}
-	
-	public void setNuDdd(final String nuDdd) {
-		this.nuDdd = nuDdd;
-	}
 	
 	public String getNuCel() {
 		return nuCel;

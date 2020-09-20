@@ -22,15 +22,16 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity httpSecurity) throws Exception {
 		
-		CorsConfiguration corsConfiguration = new CorsConfiguration();
-		
-		List<String> allowed = new ArrayList<String>();
-		allowed.add(CorsConfiguration.ALL);
-		corsConfiguration.setAllowedHeaders(allowed);
-		corsConfiguration.setAllowedMethods(allowed);
-		corsConfiguration.setAllowedOrigins(allowed);
-		
-		httpSecurity.cors().configurationSource(request -> corsConfiguration);
+//		CorsConfiguration corsConfiguration = new CorsConfiguration();
+//
+//		List<String> allowed = new ArrayList<String>();
+//		allowed.add(CorsConfiguration.ALL);
+//		corsConfiguration.setAllowedHeaders(allowed);
+//		corsConfiguration.setAllowedMethods(allowed);
+//		corsConfiguration.setAllowedOrigins(allowed);
+//
+//		httpSecurity.cors().configurationSource(request -> corsConfiguration);
+		httpSecurity.cors().configurationSource(request -> new CorsConfiguration().applyPermitDefaultValues());
 
 		httpSecurity.csrf().disable().authorizeRequests()
 

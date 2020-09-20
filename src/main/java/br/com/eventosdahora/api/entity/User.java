@@ -43,12 +43,7 @@ public class User implements Serializable {
 	private String dsPassword;
 	
 	@NotBlank
-	@Size(max = 2, min = 2)
-	@Column(name = "nu_ddd_cel")
-	private String nuDdd;
-	
-	@NotBlank
-	@Size(max = 9, min = 8)
+	@Size(max = 20, min = 8)
 	@Column(name = "nu_cel")
 	private String nuCel;
 	
@@ -103,14 +98,6 @@ public class User implements Serializable {
 		this.nmUser = nmUser;
 	}
 	
-	public String getNuDdd() {
-		return nuDdd;
-	}
-
-	public void setNuDdd(String nuDdd) {
-		this.nuDdd = nuDdd;
-	}
-
 	public String getNuCel() {
 		return nuCel;
 	}
