@@ -98,7 +98,6 @@ public class UserService {
 		
 		optional.get().setDsEmail(user.getDsEmail());
 		optional.get().setNmUser(user.getNmUser());
-		optional.get().setNuDdd(user.getNuDdd());
 		optional.get().setNuCel(user.getNuCel());
 		return userRepository.save(optional.get());
 	}

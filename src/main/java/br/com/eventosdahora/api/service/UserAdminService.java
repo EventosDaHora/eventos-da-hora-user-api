@@ -100,7 +100,6 @@ public class UserAdminService {
 		
 		optional.get().setDsEmail(user.getDsEmail());
 		optional.get().setNmUser(user.getNmUser());
-		optional.get().setNuDdd(user.getNuDdd());
 		optional.get().setNuCel(user.getNuCel());
 		return userAdminRepository.save(optional.get());
 	}
