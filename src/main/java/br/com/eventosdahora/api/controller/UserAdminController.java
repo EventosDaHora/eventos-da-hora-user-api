@@ -18,7 +18,6 @@ import javax.validation.Valid;
 import java.io.IOException;
 import java.util.List;
 
-@CrossOrigin
 @RestController
 @RequestMapping("/users-admin")
 @Api(value = "users-admin", description = "Users Admin API")

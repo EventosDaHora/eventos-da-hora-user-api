@@ -5,27 +5,19 @@ services:
     image: eventos-da-hora-user-api:latest
     build: ./
     ports:
-      - "8181:8181"
+      - "8001:8001"
     depends_on:
       - eventos-da-hora-user-api-db
-    networks:
-      - eventosdahora-net
+
   eventos-da-hora-user-api-db:
     container_name: eventos-da-hora-user-api-db
     image: postgres:latest
     ports:
-      - "5434:5434"
+      - "5401:5401"
     environment:
       - POSTGRES_PASSWORD=password
       - POSTGRES_USER=postgres
       - POSTGRES_DB=eventosdahora_user_db
-    networks:
-      - eventosdahora-net
     expose:
-      - "5434"
-    command: -p 5434
-
-networks:
-  eventosdahora-net:
-    external: true
-
+      - "5401"
+    command: -p 5401
