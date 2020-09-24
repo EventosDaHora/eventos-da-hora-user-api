@@ -15,6 +15,9 @@
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+
 body {
 	margin: 0;
 	padding: 0;
@@ -116,6 +119,13 @@ a, a:hover {
 .footer a, .footer a:hover {
 	color: #999999;
 }
+
+.custom-font{
+	font-family: 'Raleway', sans-serif !important;
+	font-size: 1.5em !important;
+	color: white !important;
+}
+
 </style>
 
 <!-- MESSAGE SUBJECT -->
@@ -149,13 +159,19 @@ a, a:hover {
 
 					<tr>
 						<td align="center" valign="top"
-							style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 6.25%; padding-right: 6.25%; width: 560; padding-top: 20px; padding-bottom: 20px;">
+							style="border-collapse: collapse; border-spacing: 0;
+							 margin: 0; padding: 0; padding-left: 6.25%;
+							  padding-right: 6.25%; width: 560;
+							   padding-top: 40px; padding-bottom: 40px;">
 
 							<!-- PREHEADER --> <!-- Set text color to background color --> <!-- LOGO -->
 							<!-- Image text color should be opposite to background color. Set your url, image src, alt and title. Alt text should fit the image size. Real image size should be x2. URL format: http://domain.com/?utm_source={{Campaign-Source}}&utm_medium=email&utm_content=logo&utm_campaign={{Campaign-Name}} -->
-							<a target="_blank" style="text-decoration: none;"><img border="0"
-								vspace="0" hspace="0" th:src="${urlImage}" height="95"
-								style="color: #000000; font-size: 10px; margin: 0; padding: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; border: none; display: block;" /></a>
+							<a target="_blank" style="text-decoration: none;" class="custom-font">
+								EVENTOS D'AHORA
+<!--								<img border="0"-->
+<!--								vspace="0" hspace="0" th:src="${urlImage}" height="95"-->
+<!--								style="color: #000000; font-size: 10px; margin: 0; padding: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; border: none; display: block;" />-->
+							</a>
 
 						</td>
 					</tr>
@@ -197,7 +213,7 @@ a, a:hover {
 							<p class="blocktext">Recebemos a sua solicita&ccedil;&atilde;o para redefinir a sua senha de acesso no portal do Eventos da Hora.</p>
 							<p class="blocktext">
 								<a
-									href="${url+'/#/conta/criar-senha/'+user.idUser+'/'+user.dsToken}"
+										th:href="${url+'/#/conta/criar-senha/'+user.idUser+'/'+user.dsToken}"
 									target="_blank">Clique aqui para redefinir sua senha! :)</a>
 							</p>
 							<p class="congratstext">Se n&atilde;o foi voc&ecirc; que realizou este pedido, favor ignorar esta mensagem.</p>

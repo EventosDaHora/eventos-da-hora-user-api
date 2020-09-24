@@ -17,7 +17,7 @@ services:
       - "5401:5401"
     environment:
       - POSTGRES_PASSWORD=password
-      - POSTGRES_USER=postgres
+      - POSTGRES_USER=eventosdahora_user
       - POSTGRES_DB=eventosdahora_user_db
     networks:
       - eventosdahora-net
