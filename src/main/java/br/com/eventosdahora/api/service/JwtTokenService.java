@@ -35,6 +35,7 @@ public class JwtTokenService {
 		claims.put("rol", userRoles);
 		claims.put("idUser", user.getIdUser());
 		claims.put("nmUser", user.getNmUser());
+		claims.put("dsCellphone", user.getNuCel());
 		
 		return Jwts.builder()
 		           .setClaims(claims)
