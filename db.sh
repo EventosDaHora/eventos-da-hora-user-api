@@ -1,1 +1,1 @@
-docker run --ulimit memlock=-1:-1 -it --rm=true --memory-swappiness=0 --name userdb -e POSTGRES_USER=eventos-da-hora -e POSTGRES_PASSWORD=eventos-da-hora -e POSTGRES_DB=userdb -p 5401:5432 postgres:10.5
+docker run --ulimit memlock=-1:-1 -it -d --rm=true --memory-swappiness=0 --name userdb -e POSTGRES_USER=eventos-da-hora -e POSTGRES_PASSWORD=eventos-da-hora -e POSTGRES_DB=userdb -p 5401:5432 postgres:10.5
