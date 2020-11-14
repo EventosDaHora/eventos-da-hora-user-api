@@ -50,9 +50,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         .antMatchers(HttpMethod.GET,	"/users-admin").hasRole("USER_ADMIN_FIND_ALL")
         .antMatchers(HttpMethod.GET,	"/users-admin/**").hasRole("USER_ADMIN_FIND")
         .antMatchers(HttpMethod.POST,	"/users-admin").hasRole("USER_ADMIN_SAVE")
+        .antMatchers(HttpMethod.PUT,	"/users-admin/password/create/**/**").permitAll()
         .antMatchers(HttpMethod.PUT,	"/users-admin/**").hasRole("USER_ADMIN_EDIT")
         .antMatchers(HttpMethod.DELETE, "/users-admin/*").hasRole("USER_ADMIN_DELETE")
-        .antMatchers(HttpMethod.PUT,	"/users-admin/password/create/**/**").permitAll()
         .antMatchers(HttpMethod.PUT,	"/users-admin/password/**").hasRole("USER_ADMIN_PASSWORD_EDIT")
         .antMatchers(HttpMethod.POST,	"/users-admin/password/reset/**").permitAll()
 

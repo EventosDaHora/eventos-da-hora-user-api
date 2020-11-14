@@ -21,6 +21,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
+import java.util.logging.Logger;
 
 @Service
 public class UserAdminService {
@@ -128,7 +129,9 @@ public class UserAdminService {
 	public UserAdmin createPassword(Integer idUser, String dsToken, CreatePasswordRequest createPasswordRequest)
 			throws IOException {
 		Optional<UserAdmin> optional = userAdminRepository.findById(idUser);
-		
+
+		Logger.getAnonymousLogger().info("Tentativa de reset senha " + dsToken);
+
 		if (optional.isPresent()) {
 			if (optional.get().getDsToken() != null && optional.get().getDtExpiry() != null) {
 				if (optional.get().getDsToken().equals(dsToken)) {
